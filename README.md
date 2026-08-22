@@ -13,8 +13,8 @@
 > **Hyper-V Sandbox MCP Server** is a Model Context Protocol (MCP) server that turns your local Microsoft Hyper-V hypervisor into an AI-agent-managed testing ground for code. The agent (Antigravity 2.0, Claude Desktop, etc.) gains the ability to autonomously revert VMs to clean snapshots, transfer files out-of-band via VMBus, execute commands inside the guest OS using PowerShell Direct, analyze output, and self-correct on errors (Self-Healing Loop).
 >
 > 🌟 Key Features
-🛡️ 100% Host Protection (Zero-Risk Sandbox): Potentially destructive scripts (system service modifications, registry edits, network adapter changes, file deletions) execute strictly inside an isolated virtual machine.
-⚡ PowerShell Direct (Zero-Network Dependency): Guest OS management operates via the hypervisor's internal VMBus. No network setup, open RDP/SSH/WinRM ports, or firewall tweaks required.
-🔄 Deterministic Rollback (CleanBase Checkpoint): Instant VM resets to a clean baseline snapshot before every run ensure fully reproducible tests without leftover state.
-📦 Seamless File Transfer (Guest Integration Services): Native Copy-VMFile usage to transfer scripts, libraries, and utilities (e.g., PsExec) directly from host to guest.
-🤖 Self-Healing Code Loop: The agent captures real ExitCode, stdout, and stderr outputs alongside exception stack traces to autonomously patch code and re-test until green.
+> 🛡️ 100% Host Protection (Zero-Risk Sandbox): Potentially destructive scripts (system service modifications, registry edits, network adapter changes, file deletions) execute strictly inside an isolated virtual machine.
+> ⚡ PowerShell Direct (Zero-Network Dependency): Guest OS management operates via the hypervisor's internal VMBus. No network setup, open RDP/SSH/WinRM ports, or firewall tweaks required.
+> 🔄 Deterministic Rollback (CleanBase Checkpoint): Instant VM resets to a clean baseline snapshot before every run ensure fully reproducible tests without leftover state.
+> 📦 Seamless File Transfer (Guest Integration Services): Native Copy-VMFile usage to transfer scripts, libraries, and utilities (e.g., PsExec) directly from host to guest.
+> 🤖 Self-Healing Code Loop: The agent captures real ExitCode, stdout, and stderr outputs alongside exception stack traces to autonomously patch code and re-test until green.
