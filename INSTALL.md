@@ -13,7 +13,7 @@
 - **Interpreter:** Windows PowerShell 5.1 / PowerShell 7+
 
 ### Copying Files to the System Drive
-1.
+1. Open Command Prompt or PowerShell:
 ```powershell
 git clone https://github.com/your-username/mcp-server-antigravity-hyperv
 .git
@@ -27,11 +27,19 @@ New-Item -ItemType Directory -Path "C:\MCP-HyperV" -Force
 ```powershell
 Copy-Item -Path ".\*" -Destination "C:\MCP-HyperV\" -Recurse -Force
 ```
-### **Creating a Virtual Environment (.venv)**
-Open Command Prompt or PowerShell:
+### Creating a Virtual Environment (.venv)
 ```powershell
 cd C:\MCP-Hyper-V
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install --upgrade pip
-.\.venv\Scripts\pip.exe install -r requirements.txt
+By default, PowerShell script execution is disabled in Windows (`ExecutionPolicy Restricted`).
+To allow virtual environment activation for the current user, run:
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+.\.venv\Scripts\Activate.ps1
+
+pip install --upgrade pip
+pip install -r requirements.txt
+python test_local.py
 ```
+
+
