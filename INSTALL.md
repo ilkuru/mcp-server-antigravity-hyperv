@@ -36,8 +36,8 @@ By default, PowerShell script execution is disabled in Windows (`ExecutionPolicy
 To allow virtual environment activation for the current user, run:
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
-.\.venv\Scripts\Activate.ps1
 
+.\.venv\Scripts\Activate.ps1
 pip install --upgrade pip
 pip install -r requirements.txt
 python test_local.py
