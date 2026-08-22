@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "hyperv-sandbox": {
+      "command": "C:/MCP-Hyper-V/.venv/Scripts/python.exe",
+      "args": [
+        "C:/MCP-Hyper-V/server/hyperv_server.py"
+      ],
+      "env": {
+        "PYTHONIOENCODING": "utf-8"
+      }
+    }
+  }
+}

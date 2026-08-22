@@ -1,0 +1,10 @@
+{
+  "name": "hyperv-sandbox",
+  "version": "1.0.0",
+  "description": "Hyper-V Virtual Machine integration and isolated sandbox testing plugin for Antigravity 2.0 (via .venv)",
+  "author": "Google DeepMind Antigravity User",
+  "skills": [
+    "skills/hyperv-sandbox-testing/SKILL.md"
+  ],
+  "mcpServers": "config/mcp_config.json"
+}
