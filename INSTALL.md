@@ -49,6 +49,9 @@ To give the Antigravity 2.0 AI agent access to the sandbox tools:
 ### Adding the Server to `mcp_config.json`
 Open or create the configuration file in your home directory:
 * **File path:** `%USERPROFILE%\.gemini\config\mcp_config.json` (e.g., `C:\Users\John\.gemini\config\mcp_config.json`).
+```powershell
+Copy-Item -Path ".\mcp_config.json" -Destination "$env:USERPROFILE\.gemini\config\mcp_config.json" -Force
+```
 * **Insert the following section:**
 ```json
 {
@@ -78,7 +81,9 @@ Copy the skill folder `skills/hyperv-sandbox-testing` to one of the locations wh
 
 * **Copy MCP toll dir MCP:**
   Copy dir MCP fro MCP to `%USERPROFILE%\.gemini\antigravity\` (e.g., `C:\Users\John\.gemini\antigravity\`)
-
+```powershell
+Copy-Item -Path ".\mcp" -Destination "$env:USERPROFILE\.gemini\antigravity\" -Recurse -Force
+```
 ## 5. Hyper-V Virtual Machine Setup
 
 To ensure safe script testing by the agent, the guest VM requires **Integration Services** and a **clean snapshot**:
