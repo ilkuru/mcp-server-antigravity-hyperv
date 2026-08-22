@@ -3,7 +3,6 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Protocol-Model%20Context%20Protocol-blue.svg?style=for-the-badge&logo=anthropic" alt="MCP Protocol" />
   <img src="https://img.shields.io/badge/Agent-Antigravity%202.0-8E75FF.svg?style=for-the-badge&logo=google" alt="Antigravity 2.0" />
-  <img src="https://img.shields.io/badge/Deploy%20Path-C%3A%5CMCP--Hyper--V-0078D7.svg?style=for-the-badge&logo=windows" alt="Path C:\MCP-Hyper-V" />
   <img src="https://img.shields.io/badge/Python-.venv%203.10+-3776AB.svg?style=for-the-badge&logo=python" alt="Python .venv" />
   <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License MIT" />
 </p>
