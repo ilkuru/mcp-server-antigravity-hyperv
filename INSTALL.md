@@ -17,6 +17,7 @@
 ```powershell
 git clone https://github.com/your-username/mcp-server-antigravity-hyperv
 .git
+```
 2. cd mcp-server-antigravity-hyperv
 3. Create the folder **`C:\MCP-HyperV`**.
 ```powershell
