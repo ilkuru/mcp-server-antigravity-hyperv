@@ -54,9 +54,9 @@ Open or create the configuration file in your home directory:
 {
   "mcpServers": {
     "hyperv-sandbox": {
-      "command": "C:/MCP-Hyper-V/.venv/Scripts/python.exe",
+      "command": "C:/MCP-HyperV/.venv/Scripts/python.exe",
       "args": [
-        "C:/MCP-Hyper-V/server.py"
+        "C:/MCP-HyperV/server.py"
       ],
       "env": {
         "PYTHONIOENCODING": "utf-8"
@@ -65,7 +65,7 @@ Open or create the configuration file in your home directory:
   }
 }
 ```
-### 4. Installing the Agent Skill
+**Installing the Agent Skill**
 Copy the skill folder `skills/hyperv-sandbox-testing` to one of the locations where Antigravity reads customizations:
 
 * **Option A — Globally for all projects (Recommended):**  
@@ -75,6 +75,9 @@ Copy the skill folder `skills/hyperv-sandbox-testing` to one of the locations wh
 * **Option B — Locally for a specific repository/project:**  
   Place in the root of your working project:  
   `your-project\.agents\skills\hyperv-sandbox-testing\SKILL.md`
+
+* **Copy MCP toll dir MCP**
+  Copy dir MCP fro MCP to `%USERPROFILE%\.gemini\antigravity\` (e.g., `C:\Users\John\.gemini\antigravity\`)
 
 ## 5. Hyper-V Virtual Machine Setup
 
