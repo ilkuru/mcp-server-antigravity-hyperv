@@ -76,8 +76,7 @@ Copy the skill folder `skills/hyperv-sandbox-testing` to one of the locations wh
   Place in the root of your working project:  
   `your-project\.agents\skills\hyperv-sandbox-testing\SKILL.md`
 
-* **Copy MCP toll dir MCP**
-  
+* **Copy MCP toll dir MCP:**
   Copy dir MCP fro MCP to `%USERPROFILE%\.gemini\antigravity\` (e.g., `C:\Users\John\.gemini\antigravity\`)
 
 ## 5. Hyper-V Virtual Machine Setup
