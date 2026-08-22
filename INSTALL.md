@@ -56,7 +56,7 @@ Open or create the configuration file in your home directory:
     "hyperv-sandbox": {
       "command": "C:/MCP-Hyper-V/.venv/Scripts/python.exe",
       "args": [
-        "C:/MCP-Hyper-V/server/server.py"
+        "C:/MCP-Hyper-V/server.py"
       ],
       "env": {
         "PYTHONIOENCODING": "utf-8"
