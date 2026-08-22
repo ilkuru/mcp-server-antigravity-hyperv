@@ -12,7 +12,7 @@
 - **Integration Services:** **`Guest Service Interface`** component enabled
 - **Interpreter:** Windows PowerShell 5.1 / PowerShell 7+
 
-### Copying Files to the System Drive
+### 1. Copying Files to the System Drive
 1. Open Command Prompt or PowerShell:
 ```powershell
 git clone https://github.com/your-username/mcp-server-antigravity-hyperv
@@ -27,7 +27,7 @@ New-Item -ItemType Directory -Path "C:\MCP-HyperV" -Force
 ```powershell
 Copy-Item -Path ".\*" -Destination "C:\MCP-HyperV\" -Recurse -Force
 ```
-### Creating a Virtual Environment (.venv)
+### 2. Creating a Virtual Environment (.venv)
 ```powershell
 cd C:\MCP-Hyper-V
 python -m venv .venv
@@ -38,9 +38,53 @@ To allow virtual environment activation for the current user, run:
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
 
 .\.venv\Scripts\Activate.ps1
-pip install --upgrade pip
+python.exe -m pip install --upgrade pip
 pip install -r requirements.txt
 python test_local.py
 ```
+### 3. Antigravity 2.0 Configuration Setup (mcp_config.json and SKILL.md)
 
+To give the Antigravity 2.0 AI agent access to the sandbox tools:
 
+### Adding the Server to `mcp_config.json`
+Open or create the configuration file in your home directory:
+* **File path:** `%USERPROFILE%\.gemini\config\mcp_config.json` (e.g., `C:\Users\John\.gemini\config\mcp_config.json`).
+* **Insert the following section:**
+```json
+{
+  "mcpServers": {
+    "hyperv-sandbox": {
+      "command": "C:/MCP-Hyper-V/.venv/Scripts/python.exe",
+      "args": [
+        "C:/MCP-Hyper-V/server/server.py"
+      ],
+      "env": {
+        "PYTHONIOENCODING": "utf-8"
+      }
+    }
+  }
+}
+```
+### 4. Installing the Agent Skill
+Copy the skill folder `skills/hyperv-sandbox-testing` to one of the locations where Antigravity reads customizations:
+
+* **Option A — Globally for all projects (Recommended):**  
+  Copy to the directory:  
+  `%USERPROFILE%\.gemini\antigravity\skills\hyperv-sandbox-testing\SKILL.md`
+
+* **Option B — Locally for a specific repository/project:**  
+  Place in the root of your working project:  
+  `your-project\.agents\skills\hyperv-sandbox-testing\SKILL.md`
+
+## 5. Hyper-V Virtual Machine Setup
+
+To ensure safe script testing by the agent, the guest VM requires **Integration Services** and a **clean snapshot**:
+
+1. **Enable Integration Services on the VM (Run as Administrator):**
+   ```powershell
+   Enable-VMIntegrationService -VMName "Win11-Test" -Name "Guest Service Interface"
+   ```
+2. **Create a baseline checkpoint (CleanBase):**
+   ```powershell
+   Checkpoint-VM -Name "Win11-Test" -SnapshotName "CleanBase"
+   ```
