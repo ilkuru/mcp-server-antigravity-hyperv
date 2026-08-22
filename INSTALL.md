@@ -31,6 +31,7 @@ Copy-Item -Path ".\*" -Destination "C:\MCP-HyperV\" -Recurse -Force
 ```powershell
 cd C:\MCP-Hyper-V
 python -m venv .venv
+```
 By default, PowerShell script execution is disabled in Windows (`ExecutionPolicy Restricted`).
 To allow virtual environment activation for the current user, run:
 ```powershell
