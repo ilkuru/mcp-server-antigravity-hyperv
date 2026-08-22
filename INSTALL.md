@@ -90,7 +90,7 @@ To ensure safe script testing by the agent, the guest VM requires **Integration 
 
 1. **Enable Integration Services on the VM (Run as Administrator):**
    ```powershell
-   Get-VMIntegrationService -VMName "Win10" | Where-Object { $_.Name -like "*гост*" -or $_.Name -like "*guest*" } | Enable-VMIntegrationService
+   Get-VMIntegrationService -VMName "Win11-Test" | Where-Object { $_.Name -like "*гост*" -or $_.Name -like "*guest*" } | Enable-VMIntegrationService
    ```
 2. **Create a baseline checkpoint (CleanBase):**
    ```powershell
