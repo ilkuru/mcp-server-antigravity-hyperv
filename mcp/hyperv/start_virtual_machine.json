@@ -1,0 +1,1 @@
+{"name":"start_virtual_machine","description":"Запустить виртуальную машину по имени (например, 'Win10').","parameters":{"properties":{"vm_name":{"description":"Имя виртуальной машины","title":"Vm Name","type":"string"}},"required":["vm_name"],"title":"start_virtual_machineArguments","type":"object"}}

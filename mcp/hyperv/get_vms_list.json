@@ -1,0 +1,1 @@
+{"name":"get_vms_list","description":"Получить список всех виртуальных машин, их состояние (Running/Off), память и uptime.","parameters":{"properties":{},"title":"get_vms_listArguments","type":"object"}}
