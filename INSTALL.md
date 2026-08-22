@@ -17,18 +17,21 @@
 ```powershell
 git clone https://github.com/your-username/mcp-server-antigravity-hyperv
 .git
+cd mcp-server-antigravity-hyperv
 ```
-2. cd mcp-server-antigravity-hyperv
-3. Create the folder **`C:\MCP-HyperV`**.
+2. Create the folder **`C:\MCP-HyperV`**.
 ```powershell
 New-Item -ItemType Directory -Path "C:\MCP-HyperV" -Force
-4. Copy the contents of the unzipped archive to `C:\MCP-HyperV\` so that the structure looks as follows:
+```
+3. Copy the contents of the unzipped archive to `C:\MCP-HyperV\` so that the structure looks as follows:
 ```powershell
 Copy-Item -Path ".\*" -Destination "C:\MCP-HyperV\" -Recurse -Force
+```
 ### **Creating a Virtual Environment (.venv)**
 Open Command Prompt or PowerShell:
-```cmd
+```powershell
 cd C:\MCP-Hyper-V
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install --upgrade pip
 .\.venv\Scripts\pip.exe install -r requirements.txt
+```
